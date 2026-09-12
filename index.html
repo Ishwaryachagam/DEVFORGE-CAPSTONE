@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevForge AI - Intelligent Software Development Assistant</title>
+    <!-- Visual Runtime Error Debugger -->
+    <script>
+      window.addEventListener('error', function(e) {
+        var errorDiv = document.getElementById('vite-runtime-error') || document.createElement('div');
+        errorDiv.id = 'vite-runtime-error';
+        errorDiv.style.position = 'fixed';
+        errorDiv.style.top = '0';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.height = '100%';
+        errorDiv.style.padding = '40px';
+        errorDiv.style.background = '#0e0b16';
+        errorDiv.style.color = '#ff6b6b';
+        errorDiv.style.zIndex = '999999';
+        errorDiv.style.fontFamily = 'monospace';
+        errorDiv.style.overflow = 'auto';
+        errorDiv.innerHTML = '<h1 style="color:#ef4444;margin-bottom:20px;">🚨 React Runtime Exception</h1>' +
+          '<p style="color:#f3f4f6;font-size:1.1rem;margin-bottom:20px;"><strong>Error:</strong> ' + e.message + '</p>' +
+          '<pre style="background:#1c1926;padding:20px;border-radius:8px;color:#cbd5e1;border:1px solid rgba(255,255,255,0.05);">' + (e.error ? e.error.stack : 'No stack trace available') + '</pre>';
+        document.body.appendChild(errorDiv);
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var errorDiv = document.getElementById('vite-runtime-error') || document.createElement('div');
+        errorDiv.id = 'vite-runtime-error';
+        errorDiv.style.position = 'fixed';
+        errorDiv.style.top = '0';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.height = '100%';
+        errorDiv.style.padding = '40px';
+        errorDiv.style.background = '#0e0b16';
+        errorDiv.style.color = '#ff6b6b';
+        errorDiv.style.zIndex = '999999';
+        errorDiv.style.fontFamily = 'monospace';
+        errorDiv.style.overflow = 'auto';
+        errorDiv.innerHTML = '<h1 style="color:#ef4444;margin-bottom:20px;">🚨 Unhandled Promise Rejection</h1>' +
+          '<p style="color:#f3f4f6;font-size:1.1rem;margin-bottom:20px;"><strong>Reason:</strong> ' + e.reason + '</p>';
+        document.body.appendChild(errorDiv);
+      });
+    </script>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
